@@ -8,6 +8,7 @@ import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.size
 import androidx.compose.foundation.shape.CircleShape
+import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.automirrored.rounded.Send
 import androidx.compose.material.icons.rounded.Send
@@ -39,16 +40,18 @@ fun ChatFooter (
         horizontalArrangement = Arrangement.Center,
         modifier = Modifier
             .fillMaxWidth()
-            .background(Color.LightGray)
+            .background(Color(0xFFe699ff))
             .padding(10.dp)
     ){
         OutlinedTextField(
             value = inputText, onValueChange = { inputText = it },
-            placeholder = { Text(text = "Type your message")},
+            placeholder = { Text(text = "Type your message", color = Color.Black)},
             singleLine = true,
             modifier = Modifier
                 .weight(1f)
-                .background(Color.Gray)
+                .background(Color.White, shape = RoundedCornerShape(25.dp)),
+            shape = RoundedCornerShape(25.dp)
+
         )
 
         IconButton(onClick = {
@@ -65,7 +68,7 @@ fun ChatFooter (
                     .background(Color.Black)
                     .padding(8.dp),tint = Color.White
             )
-            
+
         }
 
 

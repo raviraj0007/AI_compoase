@@ -25,26 +25,20 @@ fun ChatBot(
         modifier = Modifier.fillMaxSize()
     ) {
         ChatHeader()
-
         Box(
             modifier = Modifier.weight(1f),
             contentAlignment = Alignment.Center
         ) {
-
             if(viewModel.list.isEmpty()) {
                 Text(text = "Ask me anything")
             } else
                 ChatList(list = viewModel.list)
         }
-
         ChatFooter {
             if (it.isNotEmpty()) {
                 viewModel.sendMessage(it)
             }
-
-
         }
-
     }
 }
 

@@ -24,7 +24,7 @@ fun ChatHeader() {
         textAlign = TextAlign.Center,
         modifier = Modifier
             .fillMaxWidth()
-            .background(Color.LightGray)
+            .background(Color(0xFFe699ff))
             .padding(10.dp)
 
     )
